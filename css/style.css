@@ -1,0 +1,543 @@
+*{
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 18px;
+  /* color: #fff; */
+
+}
+:root{
+  --main-color:#0078ff;
+}
+
+
+.nav-link{
+  color: #fff;
+  position: relative;
+}
+
+.nav-link::after{
+  content: '';
+  position: absolute;
+  background-color: #fff;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  transition: all .5s ease;
+}
+.nav-item:hover .nav-link::after{
+  width: 85%;
+
+}
+
+.dropdown-menu{
+  background-color: #fff;
+  border: none;
+}
+.dropdown-menu a{
+  color: rgb(46, 46, 46);
+}
+.dropdown-menu a:hover{
+  background-color: #fff;
+
+  color: var(--main-color);
+}
+
+.sub-menu:hover > .dropdown-menu{
+  width: 90%;
+  margin: auto;
+
+}
+
+/* home */
+
+
+#home{
+  background-image: url(../img/hero-bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position:center ;
+}
+
+.container-layer{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.home-cont h1{
+  font-size: calc(1.5rem + 3vw);
+  color: #fff;
+
+  }
+  
+.home-cont p{
+  color: #fff;
+
+  font-size: 2.5rem;
+  }
+  
+  .home-cont p::after{
+    content: '';
+    animation-name: typing;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+    0%{content: "|";}
+    3%{content: "W|";}
+    6%{content: "We|";}
+    9%{content: "Web |";}
+    12%{content: "Web De|";}
+    15%{content: "Web Devel|";}
+    18%{content: "Web Develo|";}
+    22%{content: "Web Develope|";}
+    25%{content: "Web Developer|";}
+    28%{content: "Web Develope|";}
+    31%{content: "Web Develo|";}
+    34%{content: "Web Devel|";}
+    37%{content: "Web De|";}
+    40%{content: "Web |";}
+    43%{content: "We|";}
+    46%{content: "W|";}
+    48%{content: "|";}
+    50%{content: "F|";}
+    52%{content: "Fr|";}
+    54%{content: "Fro|";}
+    56%{content: "Front|";}
+    59%{content: "Fronten|";}
+    62%{content: "Frontend |";}
+    64%{content: "Frontend Dev|";}
+    67%{content: "Frontend Devel|";}
+    70%{content: "Frontend Develop|";}
+    73%{content: "Frontend Developer|";}
+    76%{content: "Frontend Develop|";}
+    79%{content: "Frontend Devel|";}
+    81%{content: "Frontend Dev|";}
+    84%{content: "Frontend |";}
+    87%{content: "Fronten|";}
+    90%{content: "Front|";}
+    93%{content: "Fro|";}
+    96%{content: "Fr|";}
+    99%{content: "F|";}
+    100%{content: "|";}
+}
+
+/* about */
+
+
+#about {
+  background-color: #f5f5f5;
+
+
+}
+
+#about .cont-heading h5{
+  
+  font-size: 32px;
+  position: relative;
+  color: black;
+}
+#about .cont-heading h5::after{
+  content: '';
+  width: 100px;
+  height: 3px;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.f-p-about{
+  font-size: 22px;
+  font-weight: 100;
+  color: rgb(39, 39, 39);
+}
+
+
+
+/* services */
+#service{
+  background-color: #f5f5f5;
+}
+
+#service h2{
+  font-size: 22px;
+
+}
+#service h5{
+  font-size: 50px;
+}
+#service p{
+  font-size: 16px;
+}
+#service .cont-heading p{
+  position: relative;
+  padding-bottom: 15px;
+
+}
+#service .cont-heading p::after{
+  content: '';
+  width: 5%;
+  height: 5px;
+  background-color:var(--main-color) ;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+#service .card .card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 90px;
+  height: 90px;
+  padding: 40px;
+  border: solid 7px var(--main-color); 
+  border-radius: 50px;
+  transition: all 0.7s ease;
+}
+
+#service .card .card-icon:hover {
+  border-color: rgb(205 225 248);
+  background-color: var(--main-color);
+  color: white;
+}
+
+
+
+/* #services .card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    padding: 40px;
+    border: solid 7px var(--main-color); 
+    border-radius: 50px;
+    transition: all 0.7s ease;
+}
+#services .card:hover .card-icon:hover {
+    border-color: rgb(205 225 248);
+    background-color: var(--main-color);
+    color: white;
+} */
+
+
+  /* slider */
+
+  #slider{
+    overflow:hidden;
+    z-index: -99;
+    background-attachment: fixed;
+    background-color:   rgb(73, 154, 239) ;
+    background-image: url(../img/overlay-bg.jpg);
+    background-position: center;
+background-size: cover; 
+ }
+  #slider  .img-layer{    
+    padding: 40px 0;
+
+    background-color: rgba(0, 120, 255, 0.6);
+  }
+  .carousel-indicators{
+    bottom: -20px;
+    /* background-color: blue; */
+  }
+  
+
+
+/* blog */
+#blog h5{
+  font-size: 48px;
+}
+#blog .cont-heading p{
+  position: relative;
+  padding-bottom: 15px;
+
+}
+#blog .cont-heading p::after{
+  content: '';
+  width: 5%;
+  height: 5px;
+  background-color:var(--main-color) ;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+/* numbers */
+
+  #numbers{
+    overflow:hidden;
+    background-attachment: fixed;
+    background-image: url(../img/counters-bg.jpg);
+    background-position: center;
+background-size: cover; 
+ }
+  #numbers  .img-layer{
+    background-color: rgba(44, 142, 255, 0.6);
+  }
+
+  /* slider */
+  .carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+
+.num-cont{
+text-align: center;
+
+}
+.num-cont h3{
+
+  color: #fff;
+
+
+}
+.num-cont h5{
+
+  color: #fff;
+
+}
+.num-cont i{
+  color: #fff;
+  font-size: 2rem;
+  width: 100px;
+  height: 100px;
+border: solid 15px rgb(90, 153, 204);
+margin: 20px 0;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+left: 50%;
+/* padding: 30px; */
+border: solid 7px #cde1f8; 
+border-radius: 50px;
+
+
+}
+
+.num-cont h5{
+font-weight: 100;
+padding: 20px 0;
+}
+
+
+/* portfolio */
+
+#portfolio{
+  background-color: #f5f5f5;
+}
+
+#portfolio h5{
+  font-size: 48px;
+}
+#portfolio .cont-heading p{
+  position: relative;
+  padding-bottom: 15px;
+
+}
+#portfolio .cont-heading p::after{
+  content: '';
+  width: 5%;
+  height: 5px;
+  background-color:var(--main-color) ;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+#portfolio .icon-port{
+left: -50%;
+
+}
+#portfolio i{
+  color: var(--main-color);
+font-size: 35px; 
+}
+
+#portfolio .img-portfolio {
+  overflow: hidden;
+}
+#portfolio .img-portfolio img{
+  transition: all 0.8s ease;
+}
+#portfolio .card-port:hover .img-portfolio img{
+  transform: scale(1.3);
+}
+
+
+#portfolio h2{
+  font-size: 20px;
+}
+#portfolio span{
+  font-size: 14px;
+}
+
+
+/* blog */
+#blog .dis-portfolio{
+  position: relative;
+  padding-bottom: 20px;
+}
+#blog .dis-portfolio::after{
+  content: '';
+  width: 5%;
+  height: 5px;
+  background-color:var(--main-color) ;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);   
+}
+#blog{
+  background-color: #f5f5f5;
+}
+
+#blog .txt-card-blog{
+  position: relative;
+}
+#blog .mid-card{
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  background: var(--main-color);
+  padding-inline: 10px;
+  padding-block: 5px;
+  border-radius: 5px;
+  color: white;
+  transform: translateX(-50%);
+  font-size: 14px;
+  
+}
+#blog .txt-card-blog h4{
+  font-size: 22px;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+#blog .txt-card-blog p{
+  font-size: 18px;
+}
+#blog .txt-card-blog h4:hover{
+  color: var(--main-color);
+}
+#blog .footer-card-blog img{
+  width: 30px;
+}
+#blog .footer-card-blog a{
+  text-decoration: none;
+  color: black;
+  transition: all .5s ease;
+}
+#blog .footer-card-blog a:hover{
+  color: var(--main-color);
+}
+
+/* contact */
+#contact{
+  overflow:hidden;
+  background-attachment: fixed;
+  background-image: url(../img/counters-bg.jpg);
+  background-position: center;
+background-size: cover; 
+}
+#contact  .img-layer{
+  background-color: rgba(44, 142, 255, 0.6);
+}
+
+#contact .cont-heading h5{
+  padding-bottom: 10px;
+  font-size: 32px;
+  position: relative;
+  color: black;
+}
+#contact .cont-heading h5::after{
+  content: '';
+  width: 100px;
+  height: 3px;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.mid-right span{
+margin-left: 15px;
+}
+
+
+
+#contact .icons .icon-contact {
+  display: flex;
+  width: 55px;
+  height: 55px;
+border: solid 4px var(--main-color);
+  border-radius: 50px;
+  transition: all 0.7s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact .icons .icon-contact:hover {
+  border-color: rgb(205 225 248);
+  background-color: var(--main-color);
+  color: white;
+}
+
+.p-right{
+  font-size: 22px;
+  color: rgb(32, 32, 32);
+  font-weight: 100;
+}
+
+
+
+  #contact .btn-primary{
+    border-radius: 50px;
+    padding-inline: 35px;
+    padding-block: 15px;
+    font-size: 20px;
+    transition: all .5s ease;
+    border:white 5px solid;
+}
+#contact .btn-primary:hover{
+    border-color: rgb(205 225 248);
+
+
+} 
+
+/* #contact .icons   {
+  color: rgb(24, 24, 24);
+}
+#contact .icons:hover {
+  color: rgb(255, 255, 255);
+}
+#contact .icons .icon-contact i {
+  color: rgb(24, 24, 24);
+}
+#contact .icons .icon-contact i:hover {
+  color: rgb(255, 255, 255);
+} */
+
+
+
+/* footer */
+
+
+footer{
+  background-color:   rgb(73, 154, 239) ;
+
+}
